@@ -44,6 +44,8 @@ app.get("/usuarios", (req, res) => {
   });
 });
 
+
+
 //pegar somente um dado
 app.get("/usuarios/:id", (req, res) => {
   // console.log('@@Um usuario aqui ->>>', req.params.id);
@@ -71,6 +73,12 @@ app.get("/usuarios/:id", (req, res) => {
       });
     }
   });
+});
+
+
+app.get("usuarios/teste/", (req, res) => {
+
+  console.log('teste')   
 });
 
 //criando dado => POST
