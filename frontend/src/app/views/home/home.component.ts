@@ -30,6 +30,8 @@ export class HomeComponent implements OnInit {
     //   console.log(res);
     // });
 
+    location.assign(this.entrarURL)
+
     console.log('@@ oq foi mandado no forms', this.userForm.value);
   }
 }

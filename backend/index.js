@@ -76,11 +76,6 @@ app.get("/usuarios/:id", (req, res) => {
 });
 
 
-app.get("usuarios/teste/", (req, res) => {
-
-  console.log('teste')   
-});
-
 //criando dado => POST
 app.post("/usuarios", (req, res) => {
   // console.log("@@@@@AQUI ==>", req.body);
@@ -119,11 +114,11 @@ app.put("/usuarios/:id", (req, res) => {
     let senhaDoUsuario = req.body.senhaUsuario;
     
 
-    let qr = `UPDATE usuario SET emailUsuario = '${emailDoUsuario}', 
+    let qr = `UPDATE usuarios SET emailUsuario = '${emailDoUsuario}', 
                                 senhaUsuario = ${senhaDoUsuario},
                                 nomeUsuario = ${nomeDoUsuario},
                                 sobrenomeUsuario = ${sobrenomeDoUsuario}
-                            WHERE id = '${uID}'`
+                            WHERE idUsuario = '${uID}'`
 
     db.query(qr, (err, result) => {
         if(err){
@@ -140,7 +135,7 @@ app.put("/usuarios/:id", (req, res) => {
 app.delete("/usuarios/:id", (req, res) => {
     let uID = req.params.id;
 
-    let qr = `DELETE FROM usuario WHERE id = '${uID}'`
+    let qr = `DELETE FROM usuarios WHERE idUsuario = '${uID}'`
 
     db.query(qr, (err, result) => {
         if(err){

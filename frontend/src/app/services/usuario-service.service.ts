@@ -31,4 +31,10 @@ export class UsuarioServiceService {
   }
 
 
+  //deletarDado
+  deletarUmDado(id:any):Observable<any>{
+    let ids = id;
+    return this._http.delete(`${this.apiUrl}${ids}`)
+  }
+
 }

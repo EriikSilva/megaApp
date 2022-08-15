@@ -14,6 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { PrincipalComponent } from './views/principal/principal.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { AdministrativoComponent } from './views/administrativo/administrativo.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -23,7 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppComponent,
     HomeComponent,
     CadastroComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    AdministrativoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [UsuarioServiceService],
   bootstrap: [AppComponent]
