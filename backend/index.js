@@ -69,9 +69,6 @@ app.get('/usuario/:id', (req, res) => {
                 message: "dado não encontrado"
             })
         }
-
-
-
     });
   
 
