@@ -33,7 +33,7 @@ export class CadastroComponent implements OnInit {
         .subscribe((res) => {
           alert(res.message);
 
-          location.assign('http://localhost:4200/');
+          //location.assign('http://localhost:4200/');
 
         })
       }

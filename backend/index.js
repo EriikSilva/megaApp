@@ -77,11 +77,17 @@ app.get("/usuarios/:id", (req, res) => {
 app.post("/usuarios", (req, res) => {
   // console.log("@@@@@AQUI ==>", req.body);
 
+  let nomeDoUsuario = req.body.nomeUsuario;
+  let sobrenomeDoUsuario = req.body.sobrenomeUsuario;
   let emailDoUsuario = req.body.emailUsuario;
   let senhaDoUsuario = req.body.senhaUsuario;
 
-  let qr = `INSERT INTO usuarios(emailUsuario, senhaUsuario) 
-                          VALUES('${emailDoUsuario}', '${senhaDoUsuario}')`;
+
+  let qr = `INSERT INTO usuarios(nomeUsuario, sobrenomeUsuario, emailUsuario, senhaUsuario) 
+                          VALUES('${nomeDoUsuario}',
+                                '${sobrenomeDoUsuario}',
+                                '${emailDoUsuario}', 
+                                '${senhaDoUsuario}')`;
 
   db.query(qr, (err, result) => {
     if (err) {
@@ -99,11 +105,16 @@ app.put("/usuarios/:id", (req, res) => {
 
     let uID = req.params.id;
 
+    let nomeDoUsuario = req.body.nomeUsuario;
+    let sobrenomeDoUsuario = req.body.sobrenomeUsuario;
     let emailDoUsuario = req.body.emailUsuario;
     let senhaDoUsuario = req.body.senhaUsuario;
     
 
-    let qr = `UPDATE usuario SET emailUsuario = '${emailDoUsuario}', senhaUsuario = ${senhaDoUsuario}
+    let qr = `UPDATE usuario SET emailUsuario = '${emailDoUsuario}', 
+                                senhaUsuario = ${senhaDoUsuario},
+                                nomeUsuario = ${nomeDoUsuario},
+                                sobrenomeUsuario = ${sobrenomeDoUsuario}
                             WHERE id = '${uID}'`
 
     db.query(qr, (err, result) => {
