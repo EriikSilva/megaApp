@@ -9,20 +9,40 @@ import { UsuarioServiceService } from 'src/app/services/usuario-service.service'
 })
 export class HomeComponent implements OnInit {
 
+  entrarURL = 'http://localhost:4200/principal'
+
+  teste:any;
+
   constructor(private service:UsuarioServiceService) { }
 
   ngOnInit(): void {
     this.service.getAllDataUser()
     .subscribe((res) => {
-      console.log('@ Todos os usuarios => ', res.data)
-    });
+      
+    })
   };
 
+  userForm = new FormGroup({
+    emailUsuario: new FormControl('', Validators.required),
+    senhaUsuario: new FormControl('', Validators.required)
+  })
 
-  
+
+  entrar(){
+
+    
+
+ this.service.pegarUmDado(this.userForm.value)
+ .subscribe((res) => {
+  console.log(res)
+ })
 
 
+  console.log(this.userForm.value);
+    
+ 
 
+  }
 
 
 

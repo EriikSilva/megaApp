@@ -23,5 +23,12 @@ export class UsuarioServiceService {
     return this._http.post(`${this.apiUrl}`, dado)
   }
 
+  //pegar um dado
+  pegarUmDado(id:any):Observable<any>{
+    let ids = id
+
+    return this._http.get(`${this.apiUrl}${ids}`);
+  }
+
 
 }

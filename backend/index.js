@@ -135,5 +135,5 @@ app.delete("/usuarios/:id", (req, res) => {
 });
 
 app.listen(porta, () => {
-  console.log("server ta rodando :)");
+  console.log("server ta rodando na porta =>", porta);
 });

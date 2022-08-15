@@ -11,7 +11,9 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { UsuarioServiceService } from './services/usuario-service.service';
 import {HttpClientModule} from '@angular/common/http';
-import { CadastroComponent } from './views/cadastro/cadastro.component'
+import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { PrincipalComponent } from './views/principal/principal.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -20,7 +22,8 @@ import { CadastroComponent } from './views/cadastro/cadastro.component'
   declarations: [
     AppComponent,
     HomeComponent,
-    CadastroComponent
+    CadastroComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { CadastroComponent } from './views/cadastro/cadastro.component'
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [UsuarioServiceService],
   bootstrap: [AppComponent]

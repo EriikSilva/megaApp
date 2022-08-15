@@ -1,20 +1,20 @@
 <div class="principal">
     <div class="form-principal">
         <h1>Log In</h1>
-        <!-- [formGroup]="userForm" -->
-        <form >
+      
+        <form [formGroup]="userForm">
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Digite seu email</mat-label>
-                <input matInput>
+                <input matInput  formControlName="emailUsuario">
             </mat-form-field>
             <br>
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>Digite sua senha</mat-label>
-                <input matInput type="password" >
+                <input matInput formControlName="senhaUsuario" type="password" >
             </mat-form-field>
-            <button class="submit-button" mat-raised-button color="primary">Entrar</button>
+            <button class="submit-button" type="submit" (click)="entrar()" mat-raised-button color="primary">Entrar</button>
         </form>
 
-        <a routerLink="" class="meio" routerLink="/cadastro">Cadastre-se</a>
+        <a class="meio" routerLink="/cadastro">Cadastre-se</a>
     </div>
 </div>
