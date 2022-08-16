@@ -37,4 +37,11 @@ export class UsuarioServiceService {
     return this._http.delete(`${this.apiUrl}${ids}`)
   }
 
+  //metodo put (atualizar)
+  atualizarUmDado(dado: any, id:any):Observable<any>{
+    let ids = id;
+
+    return this._http.put(`${this.apiUrl}${ids}`, dado)
+  }
+
 }

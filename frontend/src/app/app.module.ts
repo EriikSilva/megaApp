@@ -17,6 +17,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { AdministrativoComponent } from './views/administrativo/administrativo.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+import { TesteDialogComponent } from './testes/teste-dialog/teste-dialog.component';
+import { DialogExampleComponent } from './testes/dialog-example/dialog-example.component';
+import { AtualizarComponent } from './views/atualizar/atualizar.component';
+
 
 
 
@@ -27,7 +32,15 @@ import {MatIconModule} from '@angular/material/icon';
     HomeComponent,
     CadastroComponent,
     PrincipalComponent,
-    AdministrativoComponent
+    AdministrativoComponent,
+    TesteDialogComponent,
+    DialogExampleComponent,
+    AtualizarComponent,
+
+  ],
+  entryComponents: [
+    DialogExampleComponent, 
+
   ],
   imports: [
     BrowserModule,
@@ -41,7 +54,8 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatToolbarModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [UsuarioServiceService],
   bootstrap: [AppComponent]

@@ -90,7 +90,8 @@ app.post("/usuarios", (req, res) => {
                           VALUES('${nomeDoUsuario}',
                                 '${sobrenomeDoUsuario}',
                                 '${emailDoUsuario}', 
-                                '${senhaDoUsuario}')`;
+                                '${senhaDoUsuario}'
+                                )`;
 
   db.query(qr, (err, result) => {
     if (err) {
@@ -114,11 +115,13 @@ app.put("/usuarios/:id", (req, res) => {
     let senhaDoUsuario = req.body.senhaUsuario;
     
 
-    let qr = `UPDATE usuarios SET emailUsuario = '${emailDoUsuario}', 
-                                senhaUsuario = ${senhaDoUsuario},
-                                nomeUsuario = ${nomeDoUsuario},
-                                sobrenomeUsuario = ${sobrenomeDoUsuario}
-                            WHERE idUsuario = '${uID}'`
+    let qr = `UPDATE usuarios SET 
+                                nomeUsuario = '${nomeDoUsuario}',
+                                sobrenomeUsuario = '${sobrenomeDoUsuario}',
+                                emailUsuario = '${emailDoUsuario}', 
+                                senhaUsuario = '${senhaDoUsuario}'
+
+                                WHERE idUsuario = '${uID}'`
 
     db.query(qr, (err, result) => {
         if(err){

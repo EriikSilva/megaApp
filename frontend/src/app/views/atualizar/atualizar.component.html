@@ -1,0 +1,28 @@
+<div class="principal">
+    <div class="form-principal">
+        <h1>Atualizar</h1>
+    <form [formGroup]="userFormAtualizar">
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput  formControlName="nomeUsuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput  formControlName="sobrenomeUsuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput  formControlName="emailUsuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Senha</mat-label>
+            <input matInput formControlName="senhaUsuario" type="password" >
+        </mat-form-field>
+        <button class="submit-button" type="submit" (click)="atualizar()" mat-raised-button color="primary">Atualizar</button>
+        <button class="submit-button" type="submit" routerLink="/admin" mat-raised-button color="warn">Cancelar</button>
+    </form>
+    </div>
+</div>

@@ -1,10 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0;
-     font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-     
-.full-width{
-     width: 100%;
+.full-width {
+  width: 100%;
+}
+
+body {
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+}
+
+.meio{
+     width: 500px;
+     margin: 0 auto;
+     text-align: center;
+     align-items: center;
+     // border:3px solid red;
+}
+
+.submit-button{
+     width: 50%;
+     margin-left: 25%;
+     margin-bottom: 20px;
  }
+
+

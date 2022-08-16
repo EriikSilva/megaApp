@@ -1,0 +1,16 @@
+<div>
+    <!-- [formGroup]="userForm" -->
+    <form >
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Digite seu email</mat-label>
+            <input matInput  formControlName="emailUsuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Digite sua senha</mat-label>
+            <input matInput formControlName="senhaUsuario" type="password" >
+        </mat-form-field>
+        <button class="submit-button" mat-raised-button color="primary">Atualizar</button>
+        <button class="submit-button" color="warn" mat-dialog-close="true" mat-raised-button>Cancelar</button>
+    </form>
+</div>

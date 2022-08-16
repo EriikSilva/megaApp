@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { UsuarioServiceService } from 'src/app/services/usuario-service.service';
+import { DialogExampleComponent } from 'src/app/testes/dialog-example/dialog-example.component';
+
 
 @Component({
   selector: 'app-administrativo',
@@ -10,9 +14,16 @@ export class AdministrativoComponent implements OnInit {
 
   dataSource:any
 
-  constructor(private service:UsuarioServiceService) { }
+  constructor(
+           private service:UsuarioServiceService,
+           public dialog:MatDialog,
+           private router:ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+
+
+    // console.log(this.router.snapshot.paramMap.get('id'))
 
     this.service.getAllDataUser()
     .subscribe((res) => {
@@ -37,6 +48,11 @@ export class AdministrativoComponent implements OnInit {
       location.reload()
     });
   }
+
+  // openDialog(){
+  //   // this.dialog.open(AtualizarDialogComponent);
+  // }
+
 
 
 
